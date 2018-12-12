@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/enter_pin"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toTopOf="@+id/pinEntryEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.pinenteredittext.pinenteredittext.PinEntryEditTextLayout
+        android:id="@+id/pinEntryEditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_48"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/space_16"
+        android:layout_marginStart="368dp"
+        android:layout_marginEnd="383dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:pinAnimationType="fromBottom"
+        app:pinBackgroundDrawable="@drawable/rounded_bg_white"
+        app:pinBackgroundIsSquare="true"
+        app:pinCharacterSpacing="@dimen/space_4"
+        app:pinTextBottomPadding="@dimen/space_16"
+        tools:ignore="SpUsage" />
+
+
+</android.support.constraint.ConstraintLayout>
